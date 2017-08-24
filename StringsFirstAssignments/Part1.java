@@ -15,4 +15,18 @@ public class Part1
         }
         return "";
     }
+    void testSimpleGene(){
+        String dna = "AATGCGTAATTAATCG";
+        System.out.println("DNA strand is " + dna);
+        String gene = findSimpleGene(dna);
+        System.out.println("Gene is " + gene);
+        dna = "CGATGGTTGATAAGCCTAAGCTATAA";
+        System.out.println("DNA strand is " + dna);
+        gene = findSimpleGene(dna);
+        System.out.println("Gene is " + gene);
+        dna = "CGATGGTTGATAAGCCTAAGCTAAA";
+        System.out.println("DNA strand is " + dna);
+        gene = findSimpleGene(dna);
+        System.out.println("Gene is " + gene);
+    }
 }
