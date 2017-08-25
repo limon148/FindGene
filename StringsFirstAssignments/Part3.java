@@ -33,7 +33,7 @@ public class Part3
     public void testing(){
         String stringa = "by";
         String stringb = "A story by Abby Long";
-       System.out.println(stringa);
+        System.out.println(stringa);
         System.out.println(stringb);
         if(twoOccurrences(stringa, stringb)){
             System.out.println(twoOccurrences(stringa, stringb));
@@ -51,8 +51,15 @@ public class Part3
         else{
             System.out.println(twoOccurrences(stringa, stringb));
         }
-        //stringa = "an";
-        //stringb = "banana";
-        
+        stringa = "an";
+        stringb = "banana";
+        System.out.println(stringa);
+        System.out.println(stringb);
+        System.out.println(lastPart(stringa, stringb));
+        stringa = "zoo";
+        stringb = "forest";
+        System.out.println(stringa);
+        System.out.println(stringb);
+        System.out.println(lastPart(stringa, stringb));
     }
 }
