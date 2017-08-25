@@ -1,4 +1,5 @@
 
+import java.util.Scanner;
 public class Part2
 {
     public String findSimpleGene(String dna, String startCodon, String stopCodon){
@@ -15,19 +16,38 @@ public class Part2
         return "";
     }
     void testSimpleGene(){
-        String dna = "AATGCGTAATTAATCG";
-        String startCodon = "ATG";
-        String stopCodon = "TAA";
+        String dna = "ATGGGTTAAGTC";
+        char ch = dna.charAt(0);
+        String startCodon = "", stopCodon = "";
+        if(Character.isUpperCase(ch)){
+            startCodon = "ATG";
+            stopCodon = "TAA";
+        }
+        else{
+            startCodon = "atg";
+            stopCodon = "taa";
+        }
+        
         System.out.println("DNA strand is " + dna);
         String gene = findSimpleGene(dna, startCodon, stopCodon);
         System.out.println("Gene is " + gene);
-        dna = "CGATGGTTGATAAGCCTAAGCTATAA";
+        
+        dna = "gatgctataat";
+        ch = dna.charAt(0);
+        if(Character.isUpperCase(ch)){
+            startCodon = "ATG";
+            stopCodon = "TAA";
+        }
+        else{
+            startCodon = "atg";
+            stopCodon = "taa";
+        }
         System.out.println("DNA strand is " + dna);
         gene = findSimpleGene(dna, startCodon, stopCodon);
         System.out.println("Gene is " + gene);
-        dna = "CGATGGTTGATAAGCCTAAGCTAAA";
+        /*dna = "CGATGGTTGATAAGCCTAAGCTAAA";
         System.out.println("DNA strand is " + dna);
         gene = findSimpleGene(dna, startCodon, stopCodon);
-        System.out.println("Gene is " + gene);
+        System.out.println("Gene is " + gene);*/
     }
 }
