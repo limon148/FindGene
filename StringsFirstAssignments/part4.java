@@ -5,8 +5,11 @@ public class part4
     public void checkYoytube(){
         URLResource res = new URLResource("http://www.dukelearntoprogram.com/course2/data/manylinks.html"); 
         for(String word : res.words()){
-            
-            
+            int x = word.indexOf("youtube.com");
+            if(x != -1){
+                int startIndex = word.indexOf("\"");
+                int endIndex = word.indexOf("\"", startIndex + 1);
+            }
         }
     }
 }
