@@ -19,10 +19,21 @@ public class Part3
             curIndex = stringb.indexOf(stringa, curIndex + l);
         }
     }
+    public String lastPart(String stringa, String stringb){
+        int l = stringb.length();
+        int k = stringa.length();
+        int curIndex = 0;
+        curIndex = stringb.indexOf(stringa, curIndex);
+        if(curIndex == -1){
+            return stringb;
+        }
+        String s = stringb.substring(curIndex + k, l);
+        return s;
+    }
     public void testing(){
         String stringa = "by";
         String stringb = "A story by Abby Long";
-        System.out.println(stringa);
+       System.out.println(stringa);
         System.out.println(stringb);
         if(twoOccurrences(stringa, stringb)){
             System.out.println(twoOccurrences(stringa, stringb));
@@ -40,5 +51,8 @@ public class Part3
         else{
             System.out.println(twoOccurrences(stringa, stringb));
         }
+        //stringa = "an";
+        //stringb = "banana";
+        
     }
 }
